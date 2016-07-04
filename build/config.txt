@@ -1,0 +1,10 @@
+
+pixel2mm=3.4	//像素转换为距离的系数
+width=30		//跟踪区域宽度
+height=30		//跟踪区域高度
+device=1		//设备ID
+slow=500		//慢速时间间隔  按s切换, ESC退出程序
+normal=20		//正常时间间隔  按n切换
+log=1			//是否记录LOG
+logfile=log.csv		//LOG文件名，逗号分隔，可用EXCEL直接打开
+videofile=test.avi
