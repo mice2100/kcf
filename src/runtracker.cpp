@@ -134,7 +134,7 @@ int main(int argc, char* argv[])
     // Windows
     namedWindow(WIN_RF, WINDOW_NORMAL);//CV_WINDOW_AUTOSIZE);
     cvMoveWindow(WIN_RF, 0, 0);
-	resizeWindow(WIN_RF, 1280, 700);
+	resizeWindow(WIN_RF, 960, 720);
     setMouseCallback(WIN_RF, onMouse, &rc);
 
 	createTrackbar(TRACK, WIN_RF, &frame, frameNum, OnTrackChange, &vp);
@@ -194,7 +194,7 @@ int main(int argc, char* argv[])
 			sprintf(buf, "Speed: %.3f, Max: %.3f", speed, maxSpeed);
 			string strSpeed = buf;
 
-			putText(*frameImage, strSpeed, Point(1, 50), FONT_HERSHEY_SCRIPT_SIMPLEX, 1, Scalar::all(255), 1, 1);
+			putText(*frameImage, strSpeed, Point(1, 50), FONT_HERSHEY_SIMPLEX, 1, Scalar::all(255), 2, CV_AA);
 			rc = result;
 			//				frameTime = frameTime2;
 			if(speed > maxSpeed)
