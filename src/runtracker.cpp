@@ -132,8 +132,9 @@ int main(int argc, char* argv[])
     Rect rc(10, 10, cfg.GetConfigInt("width"), cfg.GetConfigInt("height"));
     //	milliseconds frameTime = duration_cast< milliseconds >(system_clock::now().time_since_epoch());
     // Windows
-    namedWindow(WIN_RF, CV_WINDOW_AUTOSIZE);
+    namedWindow(WIN_RF, WINDOW_NORMAL);//CV_WINDOW_AUTOSIZE);
     cvMoveWindow(WIN_RF, 0, 0);
+	resizeWindow(WIN_RF, 1280, 700);
     setMouseCallback(WIN_RF, onMouse, &rc);
 
 	createTrackbar(TRACK, WIN_RF, &frame, frameNum, OnTrackChange, &vp);
