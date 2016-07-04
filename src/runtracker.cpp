@@ -13,7 +13,7 @@
 
 using namespace std;
 using namespace cv;
-using namespace std::chrono;
+//using namespace std::chrono;
 
 int gInitialize = -1;
 config cfg;
